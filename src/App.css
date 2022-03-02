@@ -1,0 +1,20 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-image: linear-gradient(
+    to right top,
+    #144369,
+    #2b2f4d,
+    #291f30,
+    #1c1219,
+    #000000
+  );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.app-container {
+  height: 100%;
+}
