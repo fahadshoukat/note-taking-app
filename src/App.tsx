@@ -1,4 +1,5 @@
-import Header from "./components/header/Header";
+
+import SideBar from "./components/sideBar/SideBar";
 import NoteContainer from "./components/noteContainer/NoteContainer";
 
 import "./App.css";
@@ -6,7 +7,7 @@ import "./App.css";
 function App() {
   return (
     <div className="app-container">
-      <Header />
+      <SideBar />
       <NoteContainer />
     </div>
   );
