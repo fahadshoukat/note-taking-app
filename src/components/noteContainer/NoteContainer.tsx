@@ -2,46 +2,14 @@ import Header from "../header/Header";
 import Note from "../note/Note";
 import "./noteContainer.css";
 
-const NoteContainer = () => {
+const NoteContainer = (props: any) => {
   return (
     <div>
       <Header />
       <div className="note-container">
-        <Note
-          note={{
-            text: "sdfasdadsf",
-            time: "01:45 PM",
-            color: "blue",
-          }}
-        />
-        <Note
-          note={{
-            text: "sdfasdadsf",
-            time: "01:45 PM",
-            color: "red",
-          }}
-        />
-        <Note
-          note={{
-            text: "sdfasdadsf",
-            time: "01:45 PM",
-            color: "green",
-          }}
-        />
-        <Note
-          note={{
-            text: "sdfasdadsf",
-            time: "01:45 PM",
-            color: "purple",
-          }}
-        />
-        <Note
-          note={{
-            text: "sdfasdadsf",
-            time: "01:45 PM",
-            color: "orange",
-          }}
-        />
+        {props.notes.map((item: any, index: number) => (
+          <Note key={index} note={item} />
+        ))}
       </div>
     </div>
   );

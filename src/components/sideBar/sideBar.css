@@ -10,6 +10,12 @@
     flex-direction: column;
     padding: 0;
     align-items: center;
+    height: 0;
+    transition: 300ms;
+}
+
+.sideBar_list_active{
+    height: 300px;
 }
 
 .sideBar_list_item {
@@ -17,7 +23,6 @@
     height: 26px;
     border-radius: 50%;
     margin-top: 20px;
-    padding: 8px;
     list-style: none;
     cursor: pointer;
 }
