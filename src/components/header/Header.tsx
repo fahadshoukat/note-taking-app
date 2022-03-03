@@ -1,4 +1,3 @@
-import React from 'react'
 import './header.css'
 
 const Header = () => <h1>Notes</h1>
