@@ -1,13 +1,49 @@
-
 import "./note.css";
 
 const Note = (props: any) => {
+  const formateDate = (value: any) => {
+    const months = [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec"
+    ];
+
+    if (!value) return "";
+    const date = new Date(value);
+
+    let hours = date.getHours();
+    let amPm = hours > 12 ? "PM" : "AM";
+    hours = hours ? hours : 12;
+    hours = hours > 12 ? (hours = 24 - hours) : hours;
+
+    let minutes = date.getMinutes();
+
+    let day = date.getDate();
+
+    let month = months[date.getMonth()]
+
+    return `${hours}:${minutes} ${amPm} ${day} ${month}`
+  };
+
   return (
     <div className="note" style={{ backgroundColor: props.note.color }}>
       <textarea className="note_text" defaultValue={props.note.text} />
       <div className="note-footer">
-        <p>{props.note.time}</p>
-        <button className="noselect" id="deleteBtn">
+        <h4>{formateDate(props.note.time)}</h4>
+        <button
+          className="noselect"
+          id="deleteBtn"
+          onClick={() => props.deleteNote(props.note.id)}
+        >
           <span className="text">Delete</span>
           <span className="icon">
             <svg

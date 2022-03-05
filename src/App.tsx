@@ -4,12 +4,13 @@ import { useState } from "react";
 
 import "./App.css";
 
+
 function App() {
   const [notes, setNotes] = useState([
     {
       id: "1",
       text: "fahad",
-      time: "01:45 PM",
+      time: 1,
       color: "blue",
     }
   ]);
@@ -20,17 +21,28 @@ function App() {
     tempNotes.unshift({
       id: Date.now() + "" + Math.floor(Math.random()*90),
       text: "",
-      time: "",
+      time: Date.now(),
       color
     });
 
     setNotes(tempNotes)
   };
 
+  const deleteNote = (id: any) => {
+    const tempNotes = [...notes];
+
+    const index = tempNotes.findIndex((item) => item.id === id)
+
+    if(index < 0) return
+
+    tempNotes.splice(index, 1)
+    setNotes(tempNotes)
+  } 
+
   return (
     <div className="app-container">
       <SideBar addNote={addNote} />
-      <NoteContainer notes={notes} />
+      <NoteContainer notes={notes} deleteNote={deleteNote} />
     </div>
   );
 }

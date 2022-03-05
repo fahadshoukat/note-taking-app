@@ -27,6 +27,7 @@
 
 .note-footer button {
     opacity: 0;
+    transition: 300ms;
 }
 
 .note:hover .note-footer button {
