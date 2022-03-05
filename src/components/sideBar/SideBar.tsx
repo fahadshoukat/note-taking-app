@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./sideBar.css";
 
 const SideBar = (props: any) => {
-  const colors = ["#FFC75F", "#F9F871", "#2C73D2", "#00C9A7", "#FF8066"];
+  const colors = ["#FFC75F", "#F9F871", "#00C9A7", "#FF8066", "#FFFADE", "#90ee90", "#b0e5ff", "#ffc6b0"];
 
   const [listOpen, setListOpen] = useState(false);
   return (

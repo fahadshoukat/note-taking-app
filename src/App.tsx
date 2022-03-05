@@ -11,7 +11,7 @@ function App() {
       id: "1",
       text: "fahad",
       time: 1,
-      color: "blue",
+      color: "lightGreen",
     }
   ]);
 
