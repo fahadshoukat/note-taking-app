@@ -1,42 +1,35 @@
-
 import SideBar from "./components/sideBar/SideBar";
 import NoteContainer from "./components/noteContainer/NoteContainer";
+import { useState } from "react";
 
 import "./App.css";
 
 function App() {
-
-  const notes = [
+  const [notes, setNotes] = useState([
     {
+      id: "1",
       text: "fahad",
       time: "01:45 PM",
-      color: "blue"
-    },
-    {
-      text: "zahad",
-      time: "11:45 PM",
-      color: "green"
-    },
-    {
-      text: "sdfadsf",
-      time: "01:25 PM",
-      color: "cyan"
-    },
-    {
-      text: "dadsf",
-      time: "12:45 PM",
-      color: "orange"
-    },
-    {
-      text: "fasdsas",
-      time: "01:00 PM",
-      color: "gray"
-    },
-  ]
+      color: "blue",
+    }
+  ]);
+
+  const addNote = (color: any) => {
+    const tempNotes = [...notes];
+
+    tempNotes.unshift({
+      id: Date.now() + "" + Math.floor(Math.random()*90),
+      text: "",
+      time: "",
+      color
+    });
+
+    setNotes(tempNotes)
+  };
 
   return (
     <div className="app-container">
-      <SideBar />
+      <SideBar addNote={addNote} />
       <NoteContainer notes={notes} />
     </div>
   );
