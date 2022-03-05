@@ -1,26 +1,26 @@
 import SideBar from "./components/sideBar/SideBar";
 import NoteContainer from "./components/noteContainer/NoteContainer";
-import * as React from "react";
+import { useState } from "react";
 
 import "./App.css";
 
-function App() {
-  const [notes, setNotes] = React.useState([
-    {
-      id: "1",
-      text: "fahad",
-      time: "",
-      color: "lightGreen",
-    }
-  ]);
+interface AddObject{
+  id: string,
+  text: string,
+  time: Date,
+  color: string
+}
 
-  const addNote = (color: any) => {
+function App() {
+  const [notes, setNotes] = useState <AddObject[]>([]);
+
+  const addNote = (color: string) => {
     const tempNotes = [...notes];
 
     tempNotes.unshift({
       id: Date.now() + "" + Math.floor(Math.random()*90),
       text: "",
-      time: new Date().toLocaleTimeString(),
+      time: new Date(),
       color
     });
 

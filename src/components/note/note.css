@@ -1,96 +1,64 @@
 .note {
-    background-color: aqua;
-    width: 300px;
-    height: 270px;
-    padding: 20px;
-    border-radius: 20px 0px;
-    display: flex;
-    flex-direction: column;
+  background-color: aqua;
+  width: 300px;
+  height: 270px;
+  padding: 20px;
+  border-radius: 20px 0px;
+  display: flex;
+  flex-direction: column;
 }
 
 .note_text {
-    flex: 1;
-    resize: none;
-    font-size: 1rem;
-    background-color: transparent;
-    outline: none;
-    border: none;
-    line-height: 1.5rem;
-
+  flex: 1;
+  resize: none;
+  font-size: 1rem;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  line-height: 1.5rem;
 }
 
 .note-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.note-footer button {
-    opacity: 0;
-    transition: 300ms;
+.note-footer span {
+  opacity: 0;
+  transition: 300ms;
 }
 
-.note:hover .note-footer button {
-    opacity: 1;
+.note:hover .note-footer span {
+  opacity: 1;
 }
 
-#deleteBtn {
-    width: 160px;
-    height: 50px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    background: red;
-    border: none;
-    border-radius: 5px;
-    box-shadow: 1px 1px 3px rgba(0,0,0,0.15);
-    background: #e62222;
-   }
-   
-   #deleteBtn, #deleteBtn span {
-    transition: 200ms;
-   }
-   
-   #deleteBtn .text {
-    transform: translateX(35px);
-    color: white;
-    font-weight: bold;
-   }
-   
-   #deleteBtn .icon {
-    position: absolute;
-    border-left: 1px solid #c41b1b;
-    transform: translateX(110px);
-    height: 40px;
-    width: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-   }
-   
-   #deleteBtn svg {
-    width: 15px;
-    fill: #eee;
-   }
-   
-   #deleteBtn:hover {
-    background: #ff3636;
-   }
-   
-   #deleteBtn:hover .text {
-    color: transparent;
-   }
-   
-   #deleteBtn:hover .icon {
-    width: 150px;
-    border-left: none;
-    transform: translateX(0);
-   }
-   
-   #deleteBtn:focus {
-    outline: none;
-   }
-   
-   #deleteBtn:active .icon svg {
-    transform: scale(0.8);
-   }
+span {
+  transition: 200ms;
+}
+
+.text {
+  color: white;
+  font-weight: bold;
+}
+
+.icon {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+svg {
+  width: 15px;
+  fill: #eee;
+}
+
+.icon:hover {
+  background: #ff3636;
+}
+
+#deleteBtn:focus {
+  outline: none;
+}
