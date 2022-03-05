@@ -1,16 +1,15 @@
 import SideBar from "./components/sideBar/SideBar";
 import NoteContainer from "./components/noteContainer/NoteContainer";
-import { useState } from "react";
+import * as React from "react";
 
 import "./App.css";
 
-
 function App() {
-  const [notes, setNotes] = useState([
+  const [notes, setNotes] = React.useState([
     {
       id: "1",
       text: "fahad",
-      time: 1,
+      time: "",
       color: "lightGreen",
     }
   ]);
@@ -21,7 +20,7 @@ function App() {
     tempNotes.unshift({
       id: Date.now() + "" + Math.floor(Math.random()*90),
       text: "",
-      time: Date.now(),
+      time: new Date().toLocaleTimeString(),
       color
     });
 
