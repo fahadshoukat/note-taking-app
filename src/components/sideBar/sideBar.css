@@ -2,7 +2,10 @@
     display: flex;
     flex-direction: column;
     text-align: center;
+    align-items: center;
     gap: 20px;
+    position: fixed;
+    width: 9vw;
 }
 
 .sideBar_list {
@@ -28,7 +31,7 @@
 }
 
 .addBtn {
-    width: 9em;
+    width: 8em;
     height: 3em;
     border-radius: 30em;
     font-size: 15px;

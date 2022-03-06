@@ -52,13 +52,9 @@ span {
 
 svg {
   width: 15px;
-  fill: #eee;
+  fill: black;
 }
 
-.icon:hover {
-  background: #ff3636;
-}
-
-#deleteBtn:focus {
-  outline: none;
+svg:hover {
+    cursor: pointer;
 }
