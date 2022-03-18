@@ -40,13 +40,13 @@ function App() {
   };
 
   return (
-    <div>
+    <>
       <Header />
       <SideBar addNote={addNote} />
       <div className="app-container">
         <NoteContainer notes={notes} deleteNote={deleteNote} />
       </div>
-    </div>
+    </>
   );
 }
 
